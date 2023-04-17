@@ -250,7 +250,7 @@ def spikformer(pretrained=False, **kwargs):
     model = Spikformer(
         patch_size=16, embed_dims=256, num_heads=16, mlp_ratios=4,
         in_channels=2, num_classes=10, qkv_bias=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=2, sr_ratios=1,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=2, sr_ratios=1,pretrained_cfg=None
         **kwargs
     )
     model.default_cfg = _cfg()
