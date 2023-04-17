@@ -172,7 +172,7 @@ class Spikformer(nn.Module):
                  img_size_h=128, img_size_w=128, patch_size=16, in_channels=2, num_classes=11,
                  embed_dims=[64, 128, 256], num_heads=[1, 2, 4], mlp_ratios=[4, 4, 4], qkv_bias=False, qk_scale=None,
                  drop_rate=0., attn_drop_rate=0., drop_path_rate=0., norm_layer=nn.LayerNorm,
-                 depths=[6, 8, 6], sr_ratios=[8, 4, 2], T = 4
+                 depths=[6, 8, 6], sr_ratios=[8, 4, 2], T = 4,pretrained_cfg=None
                  ):
         super().__init__()
         self.T = T  # time step
