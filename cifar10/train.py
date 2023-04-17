@@ -324,7 +324,7 @@ def main():
 
     if args.log_wandb:
         if has_wandb:
-            wandb.Api(api_key='faa5adf85471403e0a69a6b4548d56b45ec155ae')
+            wandb.login(key='faa5adf85471403e0a69a6b4548d56b45ec155ae')
             wandb.init(project=args.experiment, config=args)
         else:
             _logger.warning("You've requested to log metrics to wandb but package not found. "
