@@ -368,7 +368,7 @@ def main():
     random_seed(args.seed, args.rank)
     model = create_model(
         'spikformer',
-        pretrained=False,
+        pretrained=args.pretrained,
         drop_rate=0.,
         drop_path_rate=0.,
         drop_block_rate=None,
