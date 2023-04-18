@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument('--num-classes', type=int, default=10, metavar='N',
                         help='number of label classes (default: 1000)')
     parser.add_argument('--data-path', default='/home/zhou/new_disk/Spike-Element-Wise-ResNet-main/dataset/CIFAR10DVS', help='dataset')
-    parser.add_argument('--device', default='cuda:1', help='device')
+    parser.add_argument('--device', default='cuda:0', help='device')
     parser.add_argument('-b', '--batch-size', default=16, type=int)
     parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',
                         help='number of data loading workers (default: 4)')
