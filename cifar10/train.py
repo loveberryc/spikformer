@@ -106,7 +106,7 @@ parser.add_argument('--val-split', metavar='NAME', default='validation',
                     help='dataset validation split (default: validation)')
 parser.add_argument('--pretrained', action='store_true', default=False,
                     help='Start with pretrained version of specified network (if avail)')
-parser.add_argument('--initial-checkpoint', default='', type=str, metavar='PATH',
+parser.add_argument('--checkpoint_path', default='', type=str, metavar='PATH',
                     help='Initialize model from this checkpoint (default: none)')
 parser.add_argument('--resume', default='', type=str, metavar='PATH',
                     help='Resume full model and optimizer state from checkpoint (default: none)')
@@ -369,7 +369,7 @@ def main():
     model = create_model(
         'spikformer',
         pretrained=args.pretrained,
-        checkpoint_path=args.initial-checkpoint,
+        checkpoint_path=args.checkpoint_path,
         drop_rate=0.,
         drop_path_rate=0.,
         drop_block_rate=None,
