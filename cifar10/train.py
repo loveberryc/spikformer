@@ -369,6 +369,7 @@ def main():
     model = create_model(
         'spikformer',
         pretrained=args.pretrained,
+        checkpoint_path=args.initial-checkpoint,
         drop_rate=0.,
         drop_path_rate=0.,
         drop_block_rate=None,
